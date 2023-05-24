@@ -1,7 +1,7 @@
 module LookbookDocs
   class Note::Component < Base
     renders_one :action, ->(href:, text:, icon: :arrow_right_circle, **attrs) do
-      [tag.span(text, class: "ml-auto"), render(Icon::Component.new(name: icon, class: "ml-auto"))].join("\n")
+      [tag.span(text, class: "ml-auto"), render(LookbookDocs::Icon::Component.new(name: icon, class: "ml-auto"))].join("\n")
     end
 
     ICONS = {
